@@ -1,35 +1,21 @@
-<!-- Basic project information -->
+**Problem statement**
+Portfolio managers and individual investors lack a single, flexible toolkit to experiment with and deploy a wide range of portfolio‐optimization techniques—from classical mean‑variance methods through Black‑Litterman and modern shrinkage or hierarchical algorithms—that integrates seamlessly with real‑world data and workflows.
 
-A library that implements portfolio optimization methods, including classical mean‑variance optimization techniques, Black‑Litterman allocation, shrinkage, and Hierarchical Risk Parity.
+**Approach (brief)**
 
-It is extensive yet easily extensible and can be useful for both casual investors and professionals seeking an easy‑to‑use prototyping tool. Whether you have a handful of undervalued picks or a basket of algorithmic strategies, this library helps combine your alpha sources in a risk‑efficient way.
+1. **Modular Python library**
 
-It was published in the Journal of Open Source Software.
+   * Build core modules for expected‑return estimation, covariance/risk‑model calculation, and constraint‑driven optimizers.
+   * Leverage **pandas** for data handling and **cvxpy** for quadratic‐programming problems.
+2. **Algorithmic breadth**
 
-Head over to the documentation on ReadTheDocs for an in‑depth guide, or check out the cookbook for end‑to‑end examples.
+   * Implement mean‑variance, minimum‑variance, maximum‑Sharpe, efficient‑return/risk, L2‑regularized objectives, CVaR, and Hierarchical Risk Parity under a common interface.
+   * Add Black‑Litterman and shrinkage estimators (Ledoit‑Wolf, Oracle Approximating, etc.) as interchangeable risk modules.
+3. **User‑friendly API**
 
-## Table of contents
+   * Offer concise “cookbook” examples that load price data, compute metrics, and solve for optimal weights in four lines of code.
+   * Provide helper functions for discretizing continuous weights into tradeable allocations.
+4. **Extensibility & testing**
 
-- [Getting started](#getting-started)  
-- [A quick example](#a-quick-example)  
-- [Overview of optimization methods](#overview-of-optimization-methods)  
-- [Features](#features)  
-- [Installation](#installation)  
-- [Citation](#citation)  
-
----
-
-## Getting started
-
-_Note: macOS users may need to install Command Line Tools. Windows users may need to install a C++ build tool._
-
-```bash
-# Install from PyPI
-pip install PyPortfolioOpt
-
-# Or with poetry
-poetry add PyPortfolioOpt
-
-# For development
-git clone https://github.com/…/PyPortfolioOpt
-pip install -e .
+   * Structure code so users can plug in custom risk models or objectives.
+   * Achieve near–100% test coverage on real‐world datasets to ensure reliability.
