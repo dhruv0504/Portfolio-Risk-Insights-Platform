@@ -418,20 +418,4 @@ BibTex::
 }
 ```
 
-## Contributing
 
-Contributions are _most welcome_. Have a look at the [Contribution Guide](https://github.com/robertmartin8/PyPortfolioOpt/blob/master/CONTRIBUTING.md) for more.
-
-I'd like to thank all of the people who have contributed to PyPortfolioOpt since its release in 2018.
-Special shout-outs to:
-
-- Tuan Tran (who is now the primary maintainer!)
-- Philipp Schiele
-- Carl Peasnell
-- Felipe Schneider
-- Dingyuan Wang
-- Pat Newell
-- Aditya Bhutra
-- Thomas Schmelzer
-- Rich Caputo
-- Nicolas Knudde
